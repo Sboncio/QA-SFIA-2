@@ -1,5 +1,5 @@
 FROM python:3.7.9
-EXPOSE 5001
+EXPOSE 5002
 COPY . .
 RUN pip3 install -r requirements.txt
 ENTRYPOINT ["python3", "app.py"]
