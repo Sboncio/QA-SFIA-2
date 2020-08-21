@@ -1,5 +1,5 @@
-FROM python:3.6.12-alpine
+FROM python:3.7.9
 EXPOSE 5000
 COPY . .
 RUN pip3 install -r requirements.txt
-ENTRYPOINT ["python3" ,"app.py"]
+ENTRYPOINT ["python3", "app.py"]
