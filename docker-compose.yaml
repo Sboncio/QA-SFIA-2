@@ -24,11 +24,19 @@ services:
     - target: 5002
       published: 5002
       protocol: tcp
+  service4:
+    image: service4
+    build: ./service4
+    command: gunicorn --bind 0.0.0.0:5003 app:app
+    ports:
+    - target: 5003
+      published: 5003
+      protocol: tcp
   mysql:
     image: mysql:5.7
     environment: 
       # Use environment variables in jenkins!!!
       MYSQL_ROOT_PASSWORD: 'hannahandsam1'
     ports:
-    - target: 3006
-      published: 3306
+    - target: 3007
+      published: 3307
