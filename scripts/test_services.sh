@@ -1,10 +1,10 @@
 #!/bin/bash
 echo $(pwd)
 cd ~/QA-SFIA-2/service1
-pytest
+/home/jenkins/.local/bin/pytest
 cd ~/QA-SFIA-2/service2
-pytest
+/home/jenkins/.local/bin/pytest
 cd ~/QA-SFIA-2/service3
-pytest
+/home/jenkins/.local/bin/pytest
 cd ~/QA-SFIA-2/service4
-pytest
+/home/jenkins/.local/bin/pytest
