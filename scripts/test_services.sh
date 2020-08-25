@@ -1,4 +1,5 @@
 #!/bin/bash
+echo $(pwd)
 cd service1
 pytest
 cd service2
