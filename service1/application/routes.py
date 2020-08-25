@@ -2,6 +2,9 @@ from flask import render_template, request
 import requests
 from application import app
 
+weather_data = ''
+speed_data = ''
+
 @app.route('/')
 @app.route('/home')
 def home():
@@ -17,14 +20,14 @@ def getSpeed():
     response = requests.get('http://service3:5002/speed/get')
     return response.text
 
-@app.route('/send_data', methods=['POST'])
-def sendData(weather, speed):
-    response = requests.post('http://service4:5003/return/data', json={'weather': weather, 'speed': speed})
+@app.route('/send_data/<weather_data>/<speed_data>', methods=['GET','POST'])
+def sendData(weather_data, speed_data):
+    response = requests.post('http://service4:5003/return/data', json={'weather': weather_data, 'speed': speed_data})
     return response.text
 
-@app.route('/communicate')
+@app.route('/communicate', methods=['GET','POST'])
 def communicate():
-    weather = getWeather()
-    speed = getSpeed()
-    result = sendData(weather, speed)
-    return render_template('results.html', weather=weather,speed=speed,result=result)
+    weather_data = getWeather()
+    speed_data = getSpeed()
+    result = sendData(weather_data,speed_data)
+    return render_template('results.html', weather=weather_data,speed=speed_data,result=result)
