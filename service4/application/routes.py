@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template, request, Response
 import requests
 from random import randint
 from application import app

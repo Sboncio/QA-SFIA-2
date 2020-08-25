@@ -10,12 +10,27 @@ class TestBase(TestCase):
 
 class TestResponse(TestBase):
 
-    def test_response(self):
-        with patch('flask.request.get_json')as g:
-            g['weather']= 'Sun'
-            g['speed']='Average'
+    def test_response_fast(self):
+        
+        response = self.client.post(url_for('returnData'), json = {'weather':'Sun','speed':'Fast'})
+        self.assertIn(b'Slow to appropriate speed',response.data)
 
-            #g.return_value.data = jsonify({'weather':'Sun', 'speed':'Average'})
+    def test_response_caution(self):
+        
+        response = self.client.post(url_for('returnData'), json = {'weather':'Rain','speed':'Average'})
+        self.assertIn(b'Proceed with caution',response.data)
 
-            response = self.client.get(url_for('returnData'))
-            self.assertIn(b'Continue',response.data)
+    def test_response_slow_down(self):
+        
+        response = self.client.post(url_for('returnData'), json = {'weather':'Snow','speed':'Average'})
+        self.assertIn(b'Slow down',response.data)
+
+    def test_response_continue(self):
+        
+        response = self.client.post(url_for('returnData'), json = {'weather':'Sun','speed':'Average'})
+        self.assertIn(b'Continue',response.data)
+
+    def test_response_drive(self):
+        
+        response = self.client.post(url_for('returnData'), json = {'weather':'Sun','speed':'Slow'})
+        self.assertIn(b'Drive with care at appropriate speed',response.data)
