@@ -27,7 +27,7 @@ class TestResponse(TestBase):
     def test_send_data(self):
         with patch('requests.post')as g:
             g.return_value.text = 'Continue'
-            response = self.client.get(url_for('sendData'))
+            response = self.client.get(url_for('sendData',weather_data='Sun',speed_data='Average'))
 
             self.assertIn(b'Continue', response.data)
 

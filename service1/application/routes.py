@@ -20,8 +20,8 @@ def getSpeed():
     response = requests.get('http://service3:5002/speed/get')
     return response.text
 
-@app.route('/send_data', methods=['GET','POST'])
-def sendData():
+@app.route('/send_data/<weather_data>/<speed_data>', methods=['GET','POST'])
+def sendData(weather_data, speed_data):
     response = requests.post('http://service4:5003/return/data', json={'weather': weather_data, 'speed': speed_data})
     return response.text
 
@@ -29,5 +29,5 @@ def sendData():
 def communicate():
     weather_data = getWeather()
     speed_data = getSpeed()
-    result = sendData()
+    result = sendData(weather_data,speed_data)
     return render_template('results.html', weather=weather_data,speed=speed_data,result=result)
