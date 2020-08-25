@@ -1,10 +1,10 @@
 #!/bin/bash
 echo $(pwd)
-cd service1
+cd ~/QA-SFIA-2/service1
 pytest
-cd service2
+cd ~/QA-SFIA-2/service2
 pytest
-cd service3
+cd ~/QA-SFIA-2/service3
 pytest
-cd service4
+cd ~/QA-SFIA-2/service4
 pytest
