@@ -1,5 +1,5 @@
 #!/bin/bash
-echo $(pwd)
+pip3 install -r ~/QA-SFIA-2/requirements.txt
 cd ~/QA-SFIA-2/service1
 /home/jenkins/.local/bin/pytest
 cd ~/QA-SFIA-2/service2
