@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test services'){
             steps{
-                sh 'echo "This is where we will test"'
+                sh './scripts/test_services.sh'
             }
         }
         stage('Deploy services'){
