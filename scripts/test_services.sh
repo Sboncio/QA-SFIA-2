@@ -1,10 +1,10 @@
 #!/bin/bash
-pip3 install -r ~/QA-SFIA-2/requirements.txt
-cd ~/QA-SFIA-2/service1
+pip3 install -r ./requirements.txt
+cd ./service1
 /home/jenkins/.local/bin/pytest
-cd ~/QA-SFIA-2/service2
+cd ./service2
 /home/jenkins/.local/bin/pytest
-cd ~/QA-SFIA-2/service3
+cd ./service3
 /home/jenkins/.local/bin/pytest
-cd ~/QA-SFIA-2/service4
+cd ./service4
 /home/jenkins/.local/bin/pytest
