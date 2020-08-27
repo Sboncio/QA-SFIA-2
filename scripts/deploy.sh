@@ -1,3 +1,2 @@
 #!/bin/sh
-cd QA-SFIA-2
-sudo docker-compose up -d
+sudo docker stack deploy --compose-file docker-compose.yaml sfia2
