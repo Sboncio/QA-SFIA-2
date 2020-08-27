@@ -1,0 +1,10 @@
+- name: 'Initialise a swarm'
+  docker_swarm:
+    state: present
+- name: retrieve swarm worker token
+  shell: docker swarm join-token -q worker
+  register: swarm_worker_token
+- name : 'Export variable'
+  add_host:
+    name: "worker_token"
+    value: "{{ swarm_worker_token }}"

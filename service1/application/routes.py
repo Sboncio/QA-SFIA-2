@@ -29,5 +29,5 @@ def sendData(weather_data, speed_data):
 def communicate():
     weather_data = getWeather()
     speed_data = getSpeed()
-    result = sendData(weather_data,speed_data)
-    return render_template('results.html', weather=weather_data,speed=speed_data,result=result)
+    result_data = sendData(weather_data,speed_data)
+    return render_template('results.html', weather=weather_data,speed=speed_data,result=result_data)

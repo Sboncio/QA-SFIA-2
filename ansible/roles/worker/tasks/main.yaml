@@ -1,0 +1,6 @@
+- name: "Add swarm to token"
+  docker_swarm:
+    state: join
+    advertise_addr: 35.246.68.219
+    join_token: "{{ hostvars['worker_token']['value'] }}"
+    remote_addrs: [ '35.246.53.128' ]
