@@ -1,6 +1,10 @@
-- name: "Add swarm to token"
+- name: Leave swarm for a node
+  docker_swarm:
+    state: absent
+    force: true
+- name: "Add nodes"
   docker_swarm:
     state: join
-    advertise_addr: 35.246.68.219
-    join_token: "{{ hostvars['worker_token']['value'] }}"
-    remote_addrs: [ '35.246.53.128' ]
+    advertise_addr: 35.230.138.49
+    join_token: "{{ token['stdout'] }}"
+    remote_addrs: [ '35.242.138.143:2377' ]

@@ -6,12 +6,18 @@
     - curl
     - gnupg-agent
     - software-properties-common
+    - python3-pip
+    - python3
     state: latest
     update_cache: true
 - name: 'Add key'
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
+- name: 'pip installs'
+  pip: 
+   name: docker-py
+    
 - name: 'Add repo'
   apt_repository:
     repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
@@ -27,3 +33,7 @@
     - containerd.io
     state: latest
     update_cache: true
+- name: Leave swarm for a node
+  docker_swarm:
+    state: absent
+    force: true
