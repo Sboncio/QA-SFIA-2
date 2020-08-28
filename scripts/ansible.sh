@@ -6,5 +6,4 @@ echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 sudo apt install python3-pip
 ## install ansible with pip
 pip3 install --user ansible
-
-ansible-playbook -i inventory ansible/playbook.yaml
+ansible-playbook -i ./ansible/inventory ./ansible/playbook.yaml
