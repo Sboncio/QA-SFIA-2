@@ -2,7 +2,7 @@
 # make sure ~/.local/bin exists and is on your PATH
 sudo mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
-sudo source ~/.bashrc
+sudo . ~/.bashrc
 sudo apt install pip
 ## install ansible with pip
 pip install --user ansible
