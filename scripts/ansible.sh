@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # make sure ~/.local/bin exists and is on your PATH
 mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
