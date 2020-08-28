@@ -8,6 +8,10 @@ services:
     - target: 5000
       published: 5000
       protocol: tcp
+    links:
+      - mysql
+    depends_on: 
+      - mysql
   service2:
     image: service2
     build: ./service2
@@ -34,9 +38,13 @@ services:
       protocol: tcp
   mysql:
     image: mysql:5.7
+    container_name: mysql
     environment: 
       # Use environment variables in jenkins!!!
       MYSQL_ROOT_PASSWORD: 'hannahandsam1'
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
     ports:
-    - target: 3007
-      published: 3307
+    - target: 3306
+      published: 3306
+    
