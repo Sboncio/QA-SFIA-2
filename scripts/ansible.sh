@@ -3,7 +3,8 @@
 mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
 source ~/.bashrc
+apt install pip
 ## install ansible with pip
 pip install --user ansible
-apt install pip
+
 ansible-playbook -i inventory ansible/playbook.yaml
