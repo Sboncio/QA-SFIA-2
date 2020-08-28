@@ -5,6 +5,6 @@
 - name: "Add nodes"
   docker_swarm:
     state: join
-    advertise_addr: 35.230.138.49
+    advertise_addr: workers
     join_token: "{{ token['stdout'] }}"
-    remote_addrs: [ '35.242.138.143:2377' ]
+    remote_addrs: [ '35.246.68.219:2377' ]
