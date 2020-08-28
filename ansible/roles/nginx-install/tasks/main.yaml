@@ -1,0 +1,10 @@
+- name: 'Download and install nginx'
+  apt:
+    pkg:
+    - nginx
+    state: latest  
+    update_cache: true
+- name: 'Start the service'
+  service:
+    name: nginx
+    state: started

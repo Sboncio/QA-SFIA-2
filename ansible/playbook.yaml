@@ -13,3 +13,9 @@
   - role: worker
     vars:
       token: "{{ hostvars['worker_token']['value'] }}"
+- hosts: docker
+  become: yes
+  roles:
+  - role: nginx-install
+  - role: nginx-configure
+  - role: nginx-reload

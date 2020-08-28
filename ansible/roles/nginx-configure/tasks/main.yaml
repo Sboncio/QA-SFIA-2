@@ -1,0 +1,9 @@
+- name: 'Install nginx.conf file'
+  template:
+    src: ./nginx.conf
+    dest: /etc/nginx/nginx.conf
+  register: nginx_config
+- name: 'Export variable for later use'
+  add_host:
+    name: "new_config"
+    value: "{{ nginx_config }}"
