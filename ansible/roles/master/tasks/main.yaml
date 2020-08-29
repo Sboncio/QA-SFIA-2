@@ -6,5 +6,5 @@
   register: swarm_worker_token
 - name : 'Export variable'
   add_host:
-    name: "worker_token"
-    value: "{{ swarm_worker_token }}"
+    name: 'worker_token'
+    value: '{{ swarm_worker_token }}'
