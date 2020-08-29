@@ -2,6 +2,7 @@ create database sfia2;
 USE sfia2;
 create table weather ( id int AUTO_INCREMENT, weathers varchar(5), PRIMARY KEY(id));
 create table speed ( id int AUTO_INCREMENT, speeds varchar(7), PRIMARY KEY(id));
+create table results( id int AUTO_INCREMENT, weather varchar(5), speed varchar(7), result varchar(50), PRIMARY KEY(id));
 
 INSERT INTO weather (weathers) VALUES ('Rain');
 INSERT INTO weather (weathers) VALUES ('Sun');
