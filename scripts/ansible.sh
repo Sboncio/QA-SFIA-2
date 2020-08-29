@@ -1,9 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 # make sure ~/.local/bin exists and is on your PATH
-mkdir -p ~/.local/bin
+sudo mkdir -p ~/.local/bin
 echo 'PATH=$PATH:~/.local/bin' >> ~/.bashrc
-source ~/.bashrc
+. ~/.bashrc
+sudo apt install python3-pip
 ## install ansible with pip
-pip install --user ansible
-apt install pip
-ansible-playbook -i inventory ansible/playbook.yaml
+pip3 install ansible
+#sudo apt install ansible
+ansible-playbook -i ./ansible/inventory ./ansible/playbook.yaml
