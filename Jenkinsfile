@@ -11,6 +11,11 @@ pipeline {
                 sh './scripts/test_services.sh'
             }
         }
+        stage('Export Variables'){
+            steps{
+                sh './scripts/URI.sh'
+            }
+        }
         stage('Deploy services'){
             steps{
                 sh './scripts/deploy.sh'
