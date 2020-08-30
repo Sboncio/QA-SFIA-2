@@ -21,6 +21,11 @@ pipeline {
                 sh './scripts/deploy.sh'
             }
         }
+        stage('Save artifact'){
+            steps{
+                sh './scripts/artifact.sh'
+            }
+        }
     }
                    
 }
