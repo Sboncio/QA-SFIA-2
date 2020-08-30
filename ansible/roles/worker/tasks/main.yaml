@@ -7,4 +7,4 @@
     state: join
     advertise_addr: workers
     join_token: "{{ token }}"
-    remote_addrs: [ '35.246.68.219:2377' ]
+    remote_addrs: [ '35.242.138.143:2377' ]
