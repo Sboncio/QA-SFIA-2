@@ -33,7 +33,3 @@
     - containerd.io
     state: latest
     update_cache: true
-- name: Leave swarm for a node
-  docker_swarm:
-    state: absent
-    force: true

@@ -12,7 +12,7 @@
   roles:
   - role: worker
     vars:
-      token: "{{ hostvars['worker_token']['value'] }}"
+      token: "{{ hostvars['worker_token']['value']['stdout'] }}"
 - hosts: docker
   become: yes
   roles:
