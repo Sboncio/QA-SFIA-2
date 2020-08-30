@@ -1,19 +1,15 @@
 version: '3.7'
 services:
   service1:
-    image: service1
+    image: sboncio/service1
     build: ./service1
     command: gunicorn --bind 0.0.0.0:5000 app:app
     ports:
     - target: 5000
       published: 5000
       protocol: tcp
-    links:
-      - mysql
-    depends_on: 
-      - mysql
   service2:
-    image: service2
+    image: sboncio/service2
     build: ./service2
     command: gunicorn --bind 0.0.0.0:5001 app:app
     ports:
@@ -21,7 +17,7 @@ services:
       published: 5001
       protocol: tcp
   service3:
-    image: service3
+    image: sboncio/service3
     build: ./service3
     command: gunicorn --bind 0.0.0.0:5002 app:app
     ports:
@@ -29,7 +25,7 @@ services:
       published: 5002
       protocol: tcp
   service4:
-    image: service4
+    image: sboncio/service4
     build: ./service4
     command: gunicorn --bind 0.0.0.0:5003 app:app
     ports:
