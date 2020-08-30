@@ -1,2 +1,8 @@
 # QA-SFIA-2
-## Test edit ;)
+## Planning
+
+## Creation
+
+## Testing
+
+## System Integration and Build
