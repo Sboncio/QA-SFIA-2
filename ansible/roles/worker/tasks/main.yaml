@@ -1,7 +1,3 @@
-- name: Leave swarm for a node
-  docker_swarm:
-    state: absent
-    force: true
 - name: "Add nodes"
   docker_swarm:
     state: join
