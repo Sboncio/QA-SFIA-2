@@ -22,6 +22,7 @@ These technologies were:
 ### Risk Assessment
 Before the creation of the project, a risk assessment was done to isolate all the potential risks that could effect the data stored on the local database, or the operation of the  system itself.
 When a risk was mitigated, the risk was assessed once more with the added protection to measure the potential impact that the risk now possesses. 
+![alt test](./readme_assets/RiskAssessment.PNG "Sample of the risk assessment undertaken")
 
 ## Creation
 The web application is created using the python3 programming language, utilising the Flask framework for the handling of web services, HTML pages to display information in a user interface and Jinja2 to use logic on these on the previously mentioned web pages. 
