@@ -1,3 +1,3 @@
 #!/bin/sh
-export DATABASE_URI="mysql+pymysql://root:hannahandsam1@mysql:3306/sfia2"
-export SECRET_KEY_DB="Secretkey"
+export DATABASE_URI=${DATABASE_URI}
+export SECRET_KEY_DB=${SECRET_KEY_DB}
