@@ -32,6 +32,6 @@ def communicate():
     speed_data = getSpeed()
     result_data = sendData(weather_data,speed_data)
     result_post = results(weather=weather_data,speed=speed_data,result=result_data)
-    db.session.add(result_post)
-    db.session.commit()
+    #db.session.add(result_post)
+    #db.session.commit()
     return render_template('results.html', weather=weather_data,speed=speed_data,result=result_data)
