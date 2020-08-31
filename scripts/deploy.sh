@@ -1,5 +1,6 @@
 #!/bin/sh
 echo ${DATABASE_URI}
+echo ${SECRET_KEY_DB}
 sudo docker-compose build
 sudo docker-compose push
 sudo docker stack deploy --compose-file docker-compose.yaml sfia2
