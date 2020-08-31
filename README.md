@@ -35,6 +35,7 @@ Code was refactored in many areas as designs were changed and bug fixes neccessa
 Originally, this information was stored in a list local to the API for the purpose of ensuring that the services were correctly functioning. As the design of the system was finalized to implement a central database, this code was edited to make use of this newly available resource. 
 
 ## Testing
+All testing was completed automatically on each build.
 Each service was tested individually with a coverage of 100% each. This ensured that all possible outcomes of the services were functioning as intended, with no unintended consequences from different results.
 Each set of tests produced a report to provide more details in regard to the different tests that have taken place. 
 Testing for the API's was completed by mocking the results obtained from a randomly generated number. This allowed for the assurance that even though the result was chosen randomly, the system would function as intended each time.
