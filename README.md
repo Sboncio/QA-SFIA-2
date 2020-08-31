@@ -28,7 +28,7 @@ When a risk was mitigated, the risk was assessed once more with the added protec
 The web application is created using the python3 programming language, utilising the Flask framework for the handling of web services, HTML pages to display information in a user interface and Jinja2 to use logic on these on the previously mentioned web pages. 
 Each service of the project was created individually, with an independant file structure created. For each service a dockerfile was created, enabling the specific service to be containerised without any negative effects on other services. 
 The code was created using a feature-branch model on a github repository, with each new feature being created and tested before being merged into the main branch. 
-A gitignore
+A gitignore was created to avoid unneccesary files being uploaded to the repository, increasing the efficiency of commits to the repository and the cloning of the repository.
 
 ### Refactoring
 Code was refactored in many areas as designs were changed and bug fixes neccessary. An example of this code refactoring was in relation to the service 2 and service 3 API's, with how they access the data they will then relay to the main service.
