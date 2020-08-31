@@ -21,11 +21,6 @@ pipeline {
                 sh './scripts/deploy.sh'
             }
         }
-        stage('Update nodes as needed'){
-            steps{
-                sh 
-            }
-        }
         stage('Save artifact'){
             steps{
                 sh './scripts/artifact.sh'
