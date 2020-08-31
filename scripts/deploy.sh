@@ -1,4 +1,5 @@
 #!/bin/sh
+echo $(whoami)
 sudo docker-compose build
 sudo docker-compose push
 sudo docker stack deploy --compose-file docker-compose.yaml sfia2
