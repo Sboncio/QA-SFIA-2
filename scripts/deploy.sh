@@ -1,7 +1,7 @@
 #!/bin/sh
 echo ${DATABASE_URI}
 echo ${SECRET_KEY_DB}
-python3 ./test.py
+python3 ./scripts/test.py
 sudo docker-compose build
 sudo docker-compose push
 sudo docker stack deploy --compose-file docker-compose.yaml sfia2
