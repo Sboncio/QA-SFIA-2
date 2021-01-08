@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = str(os.getenv('SECRET_KEY_DB'))
-app.config['SQLALCHEMY_DATABASE_URI']="mysql+pymysql://root:hannahandsam1@mysql:3306/sfia2"
+app.config['SQLALCHEMY_DATABASE_URI']="mysql+pymysql://root:"+os.getenv("MYSQL_ROOT_PASSWORD")+"@mysql:3306/sfia2"
 #"mysql+pymysql://root:" + str(os.getenv("DATABASE_URI")) + "@mysql:3306/sfia2"
 #"mysql+pymysql://root:hannahandsam1@mysql:3306/sfia2"
 
